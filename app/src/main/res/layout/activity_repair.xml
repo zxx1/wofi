@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/repairtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/textrepair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="发现车辆故障" />
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/repairtoolbar"
+            tools:context="com.wofi.Activity.RepairActivity">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入车辆编码"
+                android:textSize="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
+
+            <com.wofi.utils.PayPwdEditText
+                android:id="@+id/ppe_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="5dp">
+
+            </com.wofi.utils.PayPwdEditText>
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="4"
+                android:columnCount="2"
+                android:layout_marginTop="20dp"
+
+                android:orientation="vertical"
+                >
+                <CheckBox
+                    android:id="@+id/checkbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车太重,骑不动"
+                    android:layout_marginLeft="10dp"
+                    />
+                <CheckBox
+                    android:id="@+id/checkbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二维码脱落"
+                    android:layout_marginLeft="10dp"
+                    />
+                <CheckBox
+                    android:id="@+id/checkbox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="把套歪了"
+                    android:layout_marginLeft="10dp"
+                    />
+                <CheckBox
+                    android:id="@+id/checkbox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车锁丢了"
+                    android:layout_marginLeft="10dp"
+                    />
+                <CheckBox
+                    android:id="@+id/checkbox5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="踏板坏了"
+                    android:layout_marginLeft="50dp"
+                    />
+                <CheckBox
+                    android:id="@+id/checkbox6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刹车失灵"
+                    android:layout_marginLeft="50dp"
+                    />
+                <CheckBox
+                    android:id="@+id/checkbox7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="龙头歪斜"
+                    android:layout_marginLeft="50dp"
+                    />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </GridLayout>
+
+            <com.wofi.utils.EmojiFilter
+                android:gravity="top"
+                android:id="@+id/beizhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="5"
+                android:hint="备注："
+                android:background="@drawable/et"
+                android:layout_marginTop="35dp"
+                />
+
+            <Button
+                android:id="@+id/rep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="提交"
+                android:layout_marginTop="20dp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_contrl_car"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wofi.Bluetooth.ControlCarActivity">
+
+    <Button
+        android:id="@+id/btn_Control_closeClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭控制端"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_Control_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始搜索"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/Spinner_car_Control"
+        style="@android:style/Widget.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Spinner>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/bluetooth" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

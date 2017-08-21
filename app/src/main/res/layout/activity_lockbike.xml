@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="2dp"
+    android:background="@drawable/test"
+    tools:context="com.wofi.Lock.Lockbike">
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="用车编号:"
+        android:textColor="#383838"
+        android:gravity="center_vertical"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/my_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv1"
+        android:text="消费：1元"
+        android:textSize="20dp"
+        android:textColor="#383838"/>
+    <TableLayout
+        android:id="@+id/tabbb"
+        android:layout_below="@+id/tv1"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:layout_column="0"
+                android:text="骑行时间"
+                android:gravity="center"
+                android:textColor="#696969"
+                />
+            <TextView
+                android:layout_weight="1"
+                android:layout_column="1"
+                android:text="运动燃烧"
+                android:gravity="center"
+                android:textColor="#696969"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/time1"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0 分钟"
+                android:textColor="#383838" />
+
+            <TextView
+                android:id="@+id/fire1"
+                android:layout_weight="1"
+                android:layout_column="1"
+                android:textColor="#383838"
+                android:gravity="center"
+                android:text="0卡路里"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tabbb"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+        <Button
+            android:id="@+id/back_bike"
+            style="@style/common_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取       消"/>
+        <Button
+            android:id="@+id/over"
+            style="@style/common_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="结束用车" />
+    </LinearLayout>
+</RelativeLayout>
+

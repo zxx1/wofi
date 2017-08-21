@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.xiaoxiaoliu.introduction.illegal_parking">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_illegal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="举报违停"
+            android:textSize="20dp"/>
+
+
+    </android.support.v7.widget.Toolbar>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入车辆编码"
+        android:textSize="12pt"
+        android:layout_marginTop="10pt"
+        android:layout_gravity="center"/>
+    <com.wofi.utils.PayPwdEditText
+        android:id="@+id/ppe_pwd1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="5dp">
+
+    </com.wofi.utils.PayPwdEditText>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkbox11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6pt"
+            android:layout_marginTop="14pt"
+            android:text="单车所停位置妨碍交通" />
+
+        <CheckBox
+            android:id="@+id/checkbox12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6pt"
+            android:text="单车停于私人领域" />
+
+        <CheckBox
+            android:id="@+id/checkbox13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6pt"
+            android:text="单车停于危险领域" />
+
+        <CheckBox
+            android:id="@+id/checkbox14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6pt"
+            android:text="单车停放位置过于偏远" />
+
+        <CheckBox
+            android:id="@+id/checkbox15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6pt"
+            android:text="其他" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_rep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-70pt"
+        android:text="提交"
+        android:textSize="20dp" />
+
+
+</LinearLayout>

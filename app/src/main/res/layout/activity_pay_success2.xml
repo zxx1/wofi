@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:paddingLeft="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="交易详情"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF"
+        android:background="#1F1F1F"
+        />
+    <TextView
+        android:id="@+id/whether"
+        android:paddingLeft="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="微信支付"
+        android:textColor="#DCDCDC"
+        android:background="#1F1F1F"
+        />
+
+    <ImageView
+        android:id="@+id/icon_fi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/wxweixin" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="支付成功"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="@color/xuanfu"/>
+    <TextView
+        android:id="@+id/pay_money"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="￥12.00"
+        android:textSize="30dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="收款方           wofi共享单车"
+        android:textSize="23dp"/>
+
+    <Button
+        android:id="@+id/fini_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@color/xuanfu"
+        android:text="完成" />
+
+</LinearLayout>

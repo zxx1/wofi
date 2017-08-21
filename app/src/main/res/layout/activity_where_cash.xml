@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/test"
+    tools:context="com.wofi.Activity.WhereCash">
+    <TextView
+        android:id="@+id/atten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="你尚未缴纳押金，暂时无法骑行！"
+        android:textColor="#383838"
+        android:textSize="18dp"/>
+    <LinearLayout
+        android:layout_below="@+id/atten"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <Button
+            android:id="@+id/clear_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/common_button_style"
+            android:text="   取    消  "
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/cash_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            style="@style/common_button_style"
+            android:text="充值押金"/>
+
+    </LinearLayout>
+</RelativeLayout>
+

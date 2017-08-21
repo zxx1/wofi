@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:background="@drawable/test"
+    tools:context="com.wofi.Activity.DialogActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="输入车辆编码"
+        android:textColor="@color/black"
+        android:textSize="24dp" />
+
+    <com.wofi.Activity.PayPwdEditText
+        android:id="@+id/ppe_pwd"
+        android:layout_below="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="15dp">
+    </com.wofi.Activity.PayPwdEditText>
+    <LinearLayout
+        android:id="@+id/lear"
+        android:layout_marginTop="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:layout_below="@+id/ppe_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/clear"
+            style="@style/common_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消"/>
+
+        <Button
+
+            android:id="@+id/sure"
+            android:layout_marginLeft="10dp"
+            style="@style/common_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定" />
+    </LinearLayout>
+</RelativeLayout>

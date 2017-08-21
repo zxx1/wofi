@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/second_button1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_my_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小提示：如果没有开锁，请使用蓝牙解锁！"
+        android:textSize="17dp"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        android:background="#AA333333"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/input1"
+            android:layout_marginLeft="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input" />
+
+        <ImageView
+            android:id="@+id/light1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light" />
+
+        <ImageView
+            android:id="@+id/bluth1"
+            android:layout_above="@+id/bluth2"
+            android:layout_alignRight="@+id/bluth2"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluth" />
+
+        <TextView
+            android:id="@+id/input2"
+            android:layout_below="@+id/input1"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="手动输入"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/light2"
+            android:layout_below="@+id/light1"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="打开手电筒"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/bluth2"
+            android:layout_alignTop="@+id/light2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:text="蓝牙解锁"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</FrameLayout>

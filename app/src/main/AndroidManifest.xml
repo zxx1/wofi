@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wofi">
+
+    <!-- 悬浮窗相关权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 添加必要的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 高德地图权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 蓝牙相关权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.mob.MobApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/wofi"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- 配置高德地图Key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1ef7b81cbb4636f811ca4a4c826cb1dd" />
+
+        <!-- 通过AndroidManifest配置AppKey和AppSecret，如果你选择通过代码配置，则不需要配置以下meta-data -->
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="1f8243f40800d" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="3d84c37f2c09687980b28e0535d3a74f" />
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Clause" />
+        <activity android:name=".Activity.MainActivity" />
+        <activity
+            android:name="com.xys.libzxing.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Activity.ScanActivity" />
+        <activity android:name=".Guide.Guide" />
+        <activity android:name=".Guide.Welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.PersonalInformation" />
+        <activity android:name=".Activity.BaseActivity" />
+        <activity android:name=".Activity.MyJourneyActivity" />
+        <activity android:name=".Activity.MyWalletActivity" />
+        <activity android:name=".Activity.RepairActivity" />
+        <activity android:name=".Activity.UserGuideActivity" />
+        <activity android:name=".Activity.AboutActivity" />
+        <activity android:name=".navigation.NavigationActivity" />
+        <activity android:name=".navigation.GPSNaviActivity" />
+        <activity android:name=".navigation.PoiSearchActivity" />
+        <activity android:name=".navigation.PiclocationActivity" />
+        <activity android:name=".navigation.WalkRouteCalculateActivity" />
+        <activity android:name=".Bluetooth.ControlCarActivity" />
+        <activity
+            android:name=".Activity.DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyle" />
+
+        <service android:name=".Lock.Unlock" />
+
+        <activity
+            android:name=".Lock.Lockbike"
+            android:label="@string/xc"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyle" />
+
+        <service
+            android:name=".Service.GsonService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Activity.JourneyActivity" />
+        <activity android:name=".Activity.MyWalletActivity1" />
+        <activity android:name=".Activity.RechargeActivity" />
+        <activity android:name=".Activity.RechargebillActivity" />
+        <activity android:name=".Activity.RechargeSucessActivity" />
+        <activity android:name=".Activity.ReturnCashActivity" />
+        <activity android:name=".Activity.UserCashActivity" />
+        <activity android:name=".Activity.PaySuccess2" />
+        <activity android:name=".Activity.CashPledgeActivity" />
+        <activity android:name=".Activity.IllegalParkingActivity" />
+        <activity android:name=".Activity.NotFindBikeActivity" />
+        <activity android:name=".Activity.NotLockActivity" />
+        <activity android:name=".Activity.RechangeInstructionsActivity" />
+        <activity
+            android:name=".Activity.WhereCash"
+            android:label="@string/attention"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyle" />
+        <activity android:name=".Activity.UseDirection" />
+        <activity android:name=".Activity.MytripActivity"></activity>
+    </application>
+
+</manifest>

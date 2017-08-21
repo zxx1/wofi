@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlediy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imagebtn1"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:src="@drawable/back"
+         />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="行程轨迹"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imagebtn2"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/share"
+        android:layout_marginTop="8dp"
+        android:gravity="right" />
+
+</RelativeLayout>

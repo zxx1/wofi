@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar_rechange_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="充值说明"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
+        </android.support.v7.widget.Toolbar>
+
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_rechange_in"
+            android:fitsSystemWindows="true"
+            tools:context="com.example.xiaoxiaoliu.introduction.introduction">
+
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+
+
+
+            </android.support.design.widget.AppBarLayout>
+
+
+            <include
+                android:id="@+id/include2"
+                layout="@layout/recharge_instructions_content"
+                android:layout_width="wrap_content"
+                android:layout_height="565dp" />
+
+
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+</layout>
